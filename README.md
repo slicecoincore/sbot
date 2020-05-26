@@ -1,6 +1,8 @@
 Free automated trading bot for Slicex exchange
 =====================================
 
+Slicex exchange: https://slicex.cc
+
 <img src="./sBot-logo.svg" width="300">
 
 ***About sBot:***
@@ -19,12 +21,11 @@ Free automated trading bot for Slicex exchange
 > - sBot analyzes market conditions in multiple assets simultaneously and execute trades whenever there is room for making a profit. Users can choose their own sBot configuration between buy and sell type of order, maximum and minimum price range, maximum and minimum spread between orders and maximum and minimum order volume to be created. Another useful feature, that sBot is equipped with is simulation. User can simulate and view orders even before they are created, in it’s personal sBot console
 
 
-Slicex exchange: https://slicex.cc
-
 
 
 
 Youtube: https://youtu.be/9qq9hgd67Xc
+
 
 
 <img src="https://preview.redd.it/46ej8inl7w051.png?width=1291&format=png&auto=webp&s=54ee23a01f50ef89e1cb13d16f9cfb062e157053" width="1000">
