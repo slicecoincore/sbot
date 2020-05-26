@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Slicex trading bot">
+    <meta name="author" content="Slicex">
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/favicon.png">
+
+    <title>SlicexBOT</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');</style>
+    <style>body { font-family: 'Share Tech Mono', monospace; }</style>
+    <style>body { background-color: #171717; }</style>
+    <style>.orange { color: #FF9000; }</style>
+    <style>.bgorange { background-color: #FF9000; }</style>
+  
+    <script
+    src="https://code.jquery.com/jquery-3.4.0.min.js"
+    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+    crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js" crossorigin="anonymous"></script>
+  
+  </head>
+
+  <body class="content pt-5 mb-5 text-white">
+    
+    <div class="container">
+            <div class="row">
+                <div class="col">
+                  <h1 class="orange">Slicex trading BOT</h1>
+                  <h5>Create orders, make profit, provide liquidity!</h5>
+                </div>
+                
+            </div>
+                <div class="row mt-5">
+                    <div class="col-lg-6 pt-4">
+                        <form>
+                          <h5>EXCHANGE</h5>
+        
+                            <div class="form-group">
+                      <!--      <label for="domain">Select exchange:</label> -->
+                                <select id="domain" class="form-control form-control-sm rounded-0">
+                                    <option value="https://x.slicex.cc">Slicex</option>
+                                  </select>
+                              </div>
+
+                              <h5>CREDENTIALS</h5>
+                          <div class="form-group">
+                      <!--  <label for="apikey">API-Key</label> -->
+                            <input type="text" id="apikey" class="form-control form-control-sm rounded-0" placeholder="API-Key" required>
+                          </div>
+                          <div class="form-group">
+                      <!--  <label for="apisecret">API-Secret</label> -->
+                            <input type="text" id="apisecret" class="form-control form-control-sm rounded-0" placeholder="API-Secret" required>
+                          </div>
+
+                          <h5>PAIR</h5>
+
+                          <div class="form-group">
+                      <!--  <label for="market">Pair:</label> -->
+                            <select id="market" class="form-control form-control-sm rounded-0">
+                            </select>
+                          </div>
+                          
+                          <h5>TYPE OF ORDER</h5>
+
+                          <div class="form-group">
+                      <!--    <label for="ordertype">Type of order that robot will create:</label> -->
+                              <select id="ordertype" class="form-control form-control-sm rounded-0">
+                                  <option value="any" selected>BUY & SELL</option>
+                                  <option value="buy">BUY</option>
+                                  <option value="sell">SELL</option>
+                                </select>
+                            </div>
+                            
+                        </form>
+                    </div>
+                        
+                        <div class="col-lg-6 pt-4">
+                        <form>
+                            <h5>PRICES</h5>
+                            <div class="form-group">
+                      <!--      <label for="rate_max">Maximum price range:</label> -->
+                                <input type="text" id="rate_max" class="form-control form-control-sm rounded-0" placeholder="Maximum price range:">
+                            </div>
+                            <div class="form-group">
+                      <!--      <label for="rate_min">Minimum price range:</label> -->
+                                <input type="text" id="rate_min" class="form-control form-control-sm rounded-0" placeholder="Minimum price range:">
+                            </div>
+                            <h5>SPREAD</h5>
+
+                          <div class="form-group">
+                      <!--      <label for="spread_max">Maximum spread between orders:</label> -->
+                                <input type="text" id="spread_max" class="form-control form-control-sm rounded-0" placeholder="Maximum spread between orders:">
+                            </div>
+                              <div class="form-group">
+                      <!--        <label for="spread_min">Minimum spread between orders:</label> -->
+                                  <input type="text" id="spread_min" class="form-control form-control-sm rounded-0" placeholder="Minimum spread between orders:">
+                              </div>
+                              <h5>VOLUME</h5>
+
+                            <div class="form-group">
+                      <!--        <label for="volume_max">Maximum order volume:</label> -->
+                                  <input type="text" id="volume_max" class="form-control form-control-sm rounded-0" placeholder="Maximum order volume:">
+                              </div>
+                              <div class="form-group">
+                      <!--      <label for="volume_min">Minimum order volume:</label> -->
+                                <input type="text" id="volume_min" class="form-control form-control-sm rounded-0" placeholder="Minimum order volume:">
+                            </div>
+                            
+                            </form>
+                      </div>
+
+                    </div>
+                    <div class="row mt-3">
+                <div class="col">
+                    <form>
+                        <h5>RUN</h5>
+
+                            <div class="form-group">
+                                <label for="simulate">Execution mode:</label>
+                                <select id="simulate" name="simulate" class="form-control form-control-sm rounded-0">
+                                    <option value="1" selected>Simulation of orders on the console</option>
+                                    <option value="0">Run in production</option>
+                                  </select>
+                              </div>
+                            <div class="">  
+                              <button class="btn btn-lg bgorange btn-block rounded-0" type="button" onclick="execute()">Execute</button>
+                              <button class="btn btn-lg btn-danger btn-block rounded-0" type="button" onclick="cancel_all_orders()">Cancel all orders for the selected pair</button>
+                            </div>  
+                    </form>
+                </div>
+            </div>     
+
+
+</div>
+<div class="text-center">
+<p class="mt-5 mb-3 text-muted">&copy; Slicex exchange | https://slicex.cc</p>
+</div>
+</body>
+</html>
+
+<script lang="javascript">
+
+    $(document).ready(function() {
+      carregarMarkets();
+    });
+
+    $("#domain").change(function () {
+      carregarMarkets();
+    });
+
+
+    function carregarMarkets() {
+      $('#market').empty();
+      $.get( $('#domain').val()+"/api/v3/public/getmarketsummaries", function( data ) {
+          for (var i = 0; i < data['result'].length; i++) {
+              $('#market').append($('<option>', {value:data['result'][i]['MarketName'], text:data['result'][i]['MarketName']}));
+            }
+        });
+    }
+
+
+
+    $("#market").change(function () {
+      $.get( ""+$('#domain').val()+"/api/v3/public/getmarketsummaries", function( data ) {
+          for (var i = 0; i < data['result'].length; i++) {
+            if  (data['result'][i]['MarketName'] == $("#market").val()) {
+              $("#rate_max").val(data['result'][i]['Last']*1.1);
+              $("#rate_min").val(data['result'][i]['Last']*0.9);
+              $("#spread_max").val(data['result'][i]['Last']*0.01);
+              $("#spread_min").val(data['result'][i]['Last']*0.001);
+              $("#preco_max").val(data['result'][i]['Last']*1.1);
+              $("#preco_min").val(data['result'][i]['Last']*0.9);
+              $("#volume_max").val(data['result'][i]['Volume']*0.01);
+              $("#volume_min").val(data['result'][i]['Volume']*0.001);
+            }
+          }
+        });
+    });
+
+    function gerarURL(method) {
+      var url = "http://localhost:8055/"+method+"?";
+      url = url + "domain="+$("#domain").val();
+      url = url + "&apikey="+$("#apikey").val();
+      url = url + "&apisecret="+$("#apisecret").val();
+      url = url + "&market="+$("#market").val();
+      url = url + "&ordertype="+$("#ordertype").val();
+      url = url + "&rate_max="+$("#rate_max").val();
+      url = url + "&rate_min="+$("#rate_min").val();
+      url = url + "&spread_max="+$("#spread_max").val();
+      url = url + "&spread_min="+$("#spread_min").val();
+      url = url + "&volume_max="+$("#volume_max").val();
+      url = url + "&volume_min="+$("#volume_min").val();
+      url = url + "&simulate="+$("#simulate").val();
+      return url;
+    }
+
+    function execute() {
+      $.get( gerarURL("execute"), function( data ) {
+          console.log(data);
+      });
+    }
+    function cancel_all_orders() {
+      $.get(gerarURL("cancelallorders"), function( data ) {
+          console.log(data);
+      });
+    }
+
+</script>
+
