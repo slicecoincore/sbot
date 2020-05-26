@@ -1,6 +1,8 @@
 Free automated trading bot for Slicex exchange
 =====================================
 
+<img src="./sBot-logo.svg" width="300">
+
 ***About sBot:***
 ***Free automated trading***
 
@@ -20,4 +22,7 @@ Free automated trading bot for Slicex exchange
 Slicex exchange: https://slicex.cc
 
 
-<img src="./sBot-logo.svg">
+
+
+Youtube: https://youtu.be/9qq9hgd67Xc
+
