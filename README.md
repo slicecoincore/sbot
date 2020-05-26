@@ -26,3 +26,5 @@ Slicex exchange: https://slicex.cc
 
 Youtube: https://youtu.be/9qq9hgd67Xc
 
+
+<img src="https://preview.redd.it/46ej8inl7w051.png?width=1291&format=png&auto=webp&s=54ee23a01f50ef89e1cb13d16f9cfb062e157053" width="1000">
