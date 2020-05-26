@@ -18,7 +18,7 @@ Slicex exchange: https://slicex.cc
 ***sBot specification:***
 ***Effectiveness and simulation***
 
-> - sBot analyzes market conditions in multiple assets simultaneously and execute trades whenever there is room for making a profit. Users can choose their own sBot configuration between buy and sell type of order, maximum and minimum price range, maximum and minimum spread between orders and maximum and minimum order volume to be created. Another useful feature, that sBot is equipped with is simulation. User can simulate and view orders even before they are created, in it’s personal sBot console
+> - sBot analyzes market conditions in multiple assets simultaneously and execute trades whenever there is room for making a profit. Users can choose their own sBot configuration between buy and sell type of order, maximum and minimum price range, maximum and minimum spread between orders, as well as maximum and minimum order volume to be created. Another useful feature, that sBot is equipped with is simulation. User can simulate and view orders even before they are created, in it’s personal sBot console
 
 
 
