@@ -19,5 +19,5 @@ Free automated trading bot for Slicex exchange
 
 Slicex exchange: https://slicex.cc
 
-![Alt text](./sBot-logo.svg)
+
 <img src="./sBot-logo.svg">
